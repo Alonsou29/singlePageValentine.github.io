@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a0033 50%, #0a0e27 100%);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeIn 1s ease-in;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #ff1493 0%, #00bfff 50%, #ff1493 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #b0a0c0;
+    font-style: italic;
+}
+
+/* CONTADOR */
+.counter-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px;
+    background: rgba(255, 20, 147, 0.1);
+    border: 2px solid #ff1493;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.counter-label {
+    font-size: 1.5rem;
+    color: #b0a0c0;
+    margin-bottom: 15px;
+}
+
+.counter-display {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00bfff 0%, #ff1493 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.counter-text {
+    font-size: 1.3rem;
+    color: #ff69b4;
+}
+
+/* CARRUSEL */
+.carousel-section {
+    margin-bottom: 80px;
+}
+
+.carousel-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff1493;
+}
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(255, 20, 147, 0.3);
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.carousel-btn {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 20, 147, 0.8);
+    transform: scale(1.1);
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #ff1493;
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* CARDS SPOTIFY STYLE */
+.songs-section {
+    margin-bottom: 30px;
+}
+
+.songs-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00bfff;
+}
+.song-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 15px 0 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Si el título es muy largo, pone puntos suspensivos */
+}
+
+/* Estilo pal' Artista (Gris y más pequeño) */
+.song-artist {
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Máximo 2 líneas de texto */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.songs-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.songs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    flex: 1;
+    max-width: 900px;
+}
+
+.song-card {
+    background: linear-gradient(135deg, rgba(255, 20, 147, 0.15) 0%, rgba(0, 191, 255, 0.15) 100%);
+    border: 2px solid #ff1493;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.song-card:hover::before {
+    left: 100%;
+}
+
+.song-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(255, 20, 147, 0.4);
+    border-color: #00bfff;
+}
+
+.song-card-icon {
+    background-color: #282828;
+    width: 100%; /* Ocupa todo el ancho de la card */
+    aspect-ratio: 1 / 1; /* Esto hace que sea un cuadrado perfecto siempre */
+
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 60px; /* Tamaño del emoji */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+
+    /* Por si después queréis meter una imagen real */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Si después le metéis una imagen de verdad, este estilo la ajusta sola */
+.song-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-btn {
+    /* El verde oficial de Spotify */
+    background-color: #1ed760;
+    border: none;
+    color: #000000; /* El icono va en negro, primo, resaltado */
+    width: 56px;
+    height: 56px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    /* Centramos el icono (el triangulito) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Animación suavecita */
+    transition: all 0.3s ease;
+
+    /* Sombra sutil, nada de manchas raras */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+    /* Posicionamiento (opcional, por si va dentro de la card) */
+    position: relative;
+}
+
+.play-btn:hover {
+    /* En Spotify, el verde se pone un pelín más claro al tocarlo */
+    background-color: #1fdf64;
+    transform: scale(1.06); /* Un toque de zoom nada más */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.play-btn:active {
+    /* Efecto de "hundido" cuando hacéis click */
+    transform: scale(0.98);
+}
+
+.song-control-btn {
+    background: transparent; /* Sin fondo, primo, estilo minimalista */
+    border: none;
+    color: #b3b3b3; /* Ese gris clarito de Spotify */
+    font-size: 24px; /* Un tamaño que se note */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Cuando le pasáis el mouse, se ilumina en blanco */
+.song-control-btn:hover {
+    color: #ffffff;
+    transform: scale(1.1); /* Un leve empujoncito */
+}
+
+/* Cuando lo hundís, que se sienta el click */
+.song-control-btn:active {
+    transform: scale(0.9);
+    opacity: 0.7;
+}
+
+/* Si queréis que el icono se vea más grande o centrado */
+#nextSongBtn {
+    margin-left: 10px;
+}
+
+.song-card.active-song {
+    border-color: #00bfff;
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.6);
+    transform: scale(1.05);
+}
+
+/* SOBRE */
+.envelope-section {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.envelope-container {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.envelope:hover .envelope-flap {
+    transform: rotateX(-180deg);
+}
+
+.envelope-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(255, 20, 147, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ff1493;
+}
+
+.envelope-flap {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(135deg, #ff1493 0%, #c71585 100%);
+    top: 0;
+    transform-origin: top;
+    transition: transform 0.6s ease;
+    border-radius: 10px 10px 0 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.envelope-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.1) 0%, rgba(255, 20, 147, 0.1) 100%);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 3px solid #00bfff;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #fff;
+    box-shadow: inset 0 0 30px rgba(0, 191, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.envelope:hover .envelope-content {
+    opacity: 1;
+}
+
+.envelope-hint {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #b0a0c0;
+    font-size: 0.9rem;
+    animation: pulse 2s infinite;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .counter-display {
+        font-size: 3rem;
+    }
+
+    .carousel {
+        height: 350px;
+    }
+
+    .songs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .carousel-section h2,
+    .songs-section h2 {
+        font-size: 1.8rem;
+    }
+}

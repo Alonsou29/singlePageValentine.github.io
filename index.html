@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz 14 de Febrero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>💕 Feliz 14 de Febrero 💕</h1>
+            <p>Para la niña mas hermosa del mundo, te amo muchisimo, gracias por existir!</p>
+        </div>
+
+        <!-- CONTADOR -->
+        <div class="counter-section">
+            <div class="counter-label">Días que llevamos juntos</div>
+            <div class="counter-display" id="counter">0</div>
+            <div class="counter-text" id="counterText">desde el primer día</div>
+        </div>
+
+        <!-- CARRUSEL -->
+        <div class="carousel-section">
+            <h2>📸 Nuestros Momentos</h2>
+            <div class="carousel">
+                <div class="carousel-inner" id="carouselInner">
+                    <div class="carousel-slide active">
+                        <img src="/img/rem1.jpg" alt="Momento 1" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/img/rem2.jpg" alt="Momento 2" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/img/rem3.jpg" alt="Momento 3" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/img/rem4.jpg" alt="Momento 4" />
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevBtn">❮</button>
+                    <button class="carousel-btn" id="nextBtn">❯</button>
+                </div>
+                <div class="carousel-dots" id="dots"></div>
+            </div>
+        </div>
+
+        <!-- CANCIONES -->
+        <div class="songs-section">
+            <h2>🎵 Nuestras Canciones</h2>
+            <div class="songs-controls">
+                <button class="song-control-btn" id="prevSongBtn">⏮</button>
+                <div class="songs-grid">
+                    <div class="song-card" id="songCard1">
+                        <div class="song-card-icon">
+                            <img src="/img/ciudad.jpeg" alt="Song 1" />
+                        </div>
+                        <h2 class="song-title"></h2>
+                        <button class="play-btn" id="playBtn1">▶</button>
+                        <p class="song-artist"></p>
+                    </div>
+                    <div class="song-card" id="songCard2">
+                        <div class="song-card-icon">
+                            <img src="/img/unico.jpeg" alt="Song 2" />
+                        </div>
+                        <h2 class="song-title"></h2>
+                        <button class="play-btn" id="playBtn2">▶</button>
+                        <p class="song-artist"></p>
+                    </div>
+                    <div class="song-card" id="songCard3">
+                        <div class="song-card-icon">
+                            <img src="/img/data.jpg" alt="Song 3" />
+                        </div>
+                        <h2 class="song-title"></h2>
+                        <button class="play-btn" id="playBtn3">▶</button>
+                        <p class="song-artist"></p>
+                    </div>
+                </div>
+                <button class="song-control-btn" id="nextSongBtn">⏭</button>
+            </div>
+        </div>
+
+        <!-- SOBRE -->
+        <div class="envelope-section">
+            <div class="envelope-container">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap">💌</div>
+                    <div class="envelope-body"></div>
+                    <div class="envelope-content" id="envelopeContent">
+                    </div>
+                </div>
+                <div class="envelope-hint">
+                    Pasa el ratón sobre el sobre
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
