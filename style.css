@@ -174,7 +174,7 @@ body {
 
 /* CARDS SPOTIFY STYLE */
 .songs-section {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .songs-section h2 {
@@ -185,12 +185,24 @@ body {
 }
 .song-title {
     color: #ffffff;
-    font-size: 16px;
-    font-weight: 700;
-    margin: 15px 0 5px 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; /* Si el título es muy largo, pone puntos suspensivos */
+    font-size: 14px; /* Tamaño base */
+    font-weight: 100;
+    margin: 15px 10px 10px 10px; /* Le metí margen a los laos pa' que no pegue */
+    text-align: center; /* ¡Clave, primo! Pa' que no quede chueco */
+
+    /* Esto es pa' que si el título es muy largo no te rompa la card */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+/* --- Ajuste para pantallas más chiquitas (Móvil) --- */
+@media (max-width: 480px) {
+    .song-title {
+        font-size: 14px; /* En el móvil se suele ver un pelín más grande */
+        margin: 12px 5px 8px 5px;
+    }
 }
 
 /* Estilo pal' Artista (Gris y más pequeño) */
@@ -203,7 +215,6 @@ body {
     display: -webkit-box;
     -webkit-line-clamp: 5; /* Máximo 2 líneas de texto */
     -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .songs-controls {
