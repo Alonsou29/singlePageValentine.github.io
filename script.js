@@ -174,7 +174,7 @@ function updateActiveSongCard() {
 function initEnvelope() {
     const envelopeContent = document.getElementById('envelopeContent');
     if (envelopeContent) {
-        envelopeContent.innerHTML = 'Te amo más cada día que pasa. Gracias por ser mi razón para sonreír. 🌹✨';
+        envelopeContent.innerHTML = 'Te amo mas que ayer, pero mucho menos que mañana, gracias por existir y hacerme los días mas felices, mas hermosos, gracias por todo mi amor, gracias por ser tu <3';
     }
 }
 
